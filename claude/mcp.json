@@ -3,6 +3,13 @@
     "playwright": {
       "command": "/opt/homebrew/bin/npx",
       "args": ["@playwright/mcp@latest", "--headless"]
+    },
+    "discord": {
+      "command": "/opt/homebrew/bin/node",
+      "args": ["/Users/dimavolsky/workspace/helicopter-ai/.claude/mcp-servers/discord-webhook/index.js"],
+      "env": {
+        "DISCORD_BOT_TOKEN": "REPLACE_WITH_TOKEN_FROM: gcloud secrets versions access latest --secret=discord-bot-token --project=helicopter-ai"
+      }
     }
   }
 }
